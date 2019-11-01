@@ -1,0 +1,159 @@
+body {
+  margin: 2em;
+  background-image: url("https://images3.alphacoders.com/235/235985.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   text-align: center;
+}
+
+#translated-text {
+      font-family: 'LCR Prissy Pig', cursive;
+      font-size: 30px;
+}
+
+.empty {
+  grid-area: empty;
+  width: 100px;
+}
+
+.sidebar {
+        grid-area: sidebar;
+    }
+
+.content {
+        grid-area: content;
+}
+
+
+.footer {
+    grid-area: footer;
+}
+
+.wrapper {
+    /*background-color: #fff;*/
+    /*color: #444;*/
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+     "header"
+     "sidebar"
+     "content"
+     "footer";
+  }
+  
+  .speech-bubble {
+	position: relative;
+	background: #fdd7e4;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 1.156em solid transparent;
+	border-right-color: #fdd7e4;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -0.578em;
+	margin-left: -1.156em;
+}
+
+#butcherPig {
+    max-width: 100%;
+    height: auto;
+    padding-top: .5em;
+    
+  }
+
+    @media only screen and (min-width: 500px)  {
+      .wrapper {
+          grid-gap: 1em;
+          grid-template-columns: repeat(3, auto);
+          grid-template-areas:
+            "empty empty content"
+            "empty empty content"
+            "empty empty content"
+            "sidebar sidebar sidebar"
+            "footer footer footer";
+          /*grid-auto-rows: minmax(150px; 100%);*/
+      }
+    }
+
+    @media only screen and (min-width: 600px)   {
+        .wrapper {
+          grid-gap: 1em;
+          grid-template-columns: repeat(3, auto);
+          grid-template-areas:
+            "empty empty content"
+            "empty empty content"
+            "empty empty content"
+            "sidebar sidebar sidebar"
+            "footer footer footer";
+          /*grid-auto-rows: minmax(150px; 100%);*/
+        }
+    }
+    
+.original-text {
+        font-family: 'LCR Prissy Pig', cursive;
+      font-size: 50px;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: .5em;
+  padding: 1em;
+  font-size: 150%; 
+}
+
+/*this works*/
+.contentBox { 
+  top: 350px;
+  border-radius: .5em;
+  padding: 1em;
+  font-size: 150%;
+}
+
+.sidebarBox {
+  margin-top: 350px;
+  border-radius: .5em;
+  padding: 1em;
+  font-size: 150%;
+}
+
+.emptybox {
+  border-radius: .5em;
+  padding: 1em;
+  font-size: 150%; 
+}
+
+.footer {
+  color: #fdd7e4;
+  font-family: "LCR Prissy Pig", cursive;
+  font-size: 75px;
+  /*background-color: rgb(134, 134, 134);*/
+}
+
+.button{
+  margin: 1em;
+  border-radius: .25em;
+  font-size: 75%;
+}
+
+.info{
+  font-size: 100%;
+}
+
+.link{
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.link:hover{
+  color: #444;
+}
+
