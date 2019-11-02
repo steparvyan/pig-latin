@@ -10,11 +10,11 @@ class App extends React.Component {
     }
   }
   // The translate function is where you will put your logic to convert the sentence entered by the user to pig location.  What is currently in the function will only directly copy what the user has entered.
-  
+
   translate = (e) => {
     e.preventDefault()
     let inputToTranslate = this.state.phrase
-    
+
     //work
     let words = inputToTranslate.split(' ');
     let pigLatinWords = [];
@@ -33,11 +33,11 @@ class App extends React.Component {
       }
       let wordLowerCase = word.toLowerCase();
       let pigLatinWord = '';
-      let firstVowel = '';       
+      let firstVowel = '';
       let dexFirstVowel = 100;
       let qDex = wordLowerCase.indexOf('q');
       let isCapatilized = word.charAt(0).toUpperCase() === word.charAt(0);
-      
+
       let vowelFound = false;
       let letterFound = false;
       for(let j = 0; j < word.length; j++) {
@@ -63,13 +63,13 @@ class App extends React.Component {
           }
         }
       }
-      
+
       if(!letterFound){
         pigLatinWord = word;
         pigLatinWords.push(pigLatinWord);
         continue;
       }
-      
+
       if(dexFirstVowel === 0){
         pigLatinWord = word + "way";
       }
@@ -108,12 +108,12 @@ class App extends React.Component {
       }
       pigLatinWords.push(pigLatinWord);
     }
-    
+
     inputToTranslate = pigLatinWords.join(" ");
     this.setState({phraseTranslated: inputToTranslate})
   }
 
-  
+
 
   handleChange = (e) => {
     this.setState({phrase: e.target.value})
@@ -121,12 +121,12 @@ class App extends React.Component {
 //https://lh3.googleusercontent.com/QvvsRY5ShwDNEouVMK8_z7QCwS3grkgd4mzZOlom23Hurralk54ObvsyEMM8ZSNR5pEFBeBMzltzEEcgi2llYJnhXTuXClN3njmMjtw3vgn8Go5jr40fHMNzfI64eYRrnHbZUutxCA=w2400
 // <div id="pigImage">
 //             <img src='https://images3.alphacoders.com/235/235985.jpg' alt="pig with butcher cut names in pig latin" id="butcherPig"></img>
-//           </div>    
+//           </div>
   render() {
     return (
-      
-      <div className="wrapper">
-        <sidebar id="left-side" className = "box sidebar sidebarBox">
+
+      <div className="wrapper background-image">
+        <sidebar className = "box sidebar sidebarBox">
           <div>
             <form className="info" onSubmit={this.translate}>
               <label htmlFor="input-phrase">Translate this: </label>
@@ -136,16 +136,12 @@ class App extends React.Component {
             <p className="original-text">{this.state.phrase}</p>
           </div>
         </sidebar>
-        <div className = "emptybox empty">
+        <div className="speech-bubble speech-bubble" id="tran-text">
+          <p>{this.state.phraseTranslated}</p>
         </div>
-        <main>
-          <div id="right-side" className="text-center contentBox content speech-bubble speech-bubble" id="tran-text">
-            <p>{this.state.phraseTranslated}</p>
-          </div>
-        </main>
         <footer className=" footer">
           <div className="text-center">
-            <p>Coded by Arvin and Ryan</p>
+            <p>c</p>
           </div>
         </footer>
       </div>

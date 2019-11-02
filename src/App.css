@@ -1,14 +1,17 @@
 body {
-  margin: 2em;
-  background-image: url("https://images3.alphacoders.com/235/235985.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
    text-align: center;
 }
 
+.background-image{
+  background-image: url("https://images3.alphacoders.com/235/235985.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top center;
+}
+
 #translated-text {
-      font-family: 'LCR Prissy Pig', cursive;
-      font-size: 30px;
+  font-family: 'LCR Prissy Pig', cursive;
+  font-size: 30px;
 }
 
 .empty {
@@ -40,11 +43,16 @@ body {
      "content"
      "footer";
   }
-  
-  .speech-bubble {
-	position: relative;
+
+.speech-bubble {
+	position: absolute;
 	background: #fdd7e4;
-	border-radius: .4em;
+  width: 20%;
+  height: 20%;
+  bottom: 50%;
+  left: 60%;
+  border-radius: .5em;
+  font-size: 150%;
 }
 
 .speech-bubble:after {
@@ -61,13 +69,6 @@ body {
 	margin-top: -0.578em;
 	margin-left: -1.156em;
 }
-
-#butcherPig {
-    max-width: 100%;
-    height: auto;
-    padding-top: .5em;
-    
-  }
 
     @media only screen and (min-width: 500px)  {
       .wrapper {
@@ -96,10 +97,10 @@ body {
           /*grid-auto-rows: minmax(150px; 100%);*/
         }
     }
-    
+
 .original-text {
-        font-family: 'LCR Prissy Pig', cursive;
-      font-size: 50px;
+  font-family: 'LCR Prissy Pig', cursive;
+  font-size: 50px;
 }
 
 .box {
@@ -107,12 +108,12 @@ body {
   color: #fff;
   border-radius: .5em;
   padding: 1em;
-  font-size: 150%; 
+  font-size: 150%;
 }
 
 /*this works*/
-.contentBox { 
-  top: 350px;
+.contentBox {
+  /* top: 350px; */
   border-radius: .5em;
   padding: 1em;
   font-size: 150%;
@@ -121,14 +122,14 @@ body {
 .sidebarBox {
   margin-top: 350px;
   border-radius: .5em;
-  padding: 1em;
+  /* padding: 1em; */
   font-size: 150%;
 }
 
 .emptybox {
   border-radius: .5em;
   padding: 1em;
-  font-size: 150%; 
+  font-size: 150%;
 }
 
 .footer {
@@ -156,4 +157,3 @@ body {
 .link:hover{
   color: #444;
 }
-
